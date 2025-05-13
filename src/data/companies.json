@@ -1,0 +1,47 @@
+[
+  {
+    "name": "gojek",
+    "path": "/companies/gojek.png",
+    "id": 1
+  },
+  {
+    "name": "grab",
+    "path": "/companies/grab.png",
+    "id": 2
+  },
+  {
+    "name": "google",
+    "path": "/companies/google.webp",
+    "id": 3
+  },
+  {
+    "name": "pertamina",
+    "path": "/companies/pertamina.png",
+    "id": 4
+  },
+  {
+    "name": "tokopedia",
+    "path": "/companies/tokopedia.png",
+    "id": 5
+  },
+  {
+    "name": "traveloka",
+    "path": "/companies/traveloka.png",
+    "id": 6
+  },
+  {
+    "name": "netflix",
+    "path": "/companies/netflix.png",
+    "id": 7
+  },
+    {
+    "name": "meta",
+    "path": "/companies/meta.svg",
+    "id": 8
+  },
+    {
+      "name": "microsoft",
+      "path": "/companies/microsoft.webp",
+      "id": 9
+    }
+]
