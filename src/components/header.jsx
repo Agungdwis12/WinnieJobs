@@ -36,53 +36,40 @@ useEffect(()=>{
 
         <div className="flex gap-8">
           <SignedOut>
-            <Button variant="outline" onClick={() => setShowSignIn(true)}>
+            <Button className="bg-white text-black hover:bg-gray-100" onClick={() => setShowSignIn(true)}>
               Login
             </Button>
           </SignedOut>
+
           <SignedIn>
-
             {user?.unsafeMetadata?.role === "recruiter" && (
-            <Link to="/post-job">
-              <Button variant="pink" className="rounded-full">
-                <PenBox className="mr-2" size={20} />
-                Post a Job
-              </Button>
-            </Link>
-          )}
+              <Link to="/post-job">
+                <Button className="bg-white text-black hover:bg-gray-100 rounded-full">
+                  <PenBox className="mr-2" size={20} />
+                  Post a Job
+                </Button>
+              </Link>
+            )}
 
-            <UserButton appearance={{
-              elements: {
-                avatarBox:'w-10 h-10',
-              }        
-            }}
+            <UserButton
+              appearance={{
+                elements: {
+                  avatarBox: "w-10 h-10",
+                },
+              }}
             >
               <UserButton.MenuItems>
-                <UserButton.Link
-                label="My Job"
-                labelIcon={<BriefcaseBusiness size={15}/>}
-                href="/my-jobs"                            
-                /> 
-                <UserButton.Link
-                label="Saved Job"
-                labelIcon={<Heart size={15}/>}
-                href="/saved-job"                            
-                /> 
-            
+                <UserButton.Link label="My Job" labelIcon={<BriefcaseBusiness size={15} />} href="/my-jobs" />
+                <UserButton.Link label="Saved Job" labelIcon={<Heart size={15} />} href="/saved-job" />
               </UserButton.MenuItems>
-           
             </UserButton>
-
           </SignedIn>
         </div>
       </nav>
 
       {showSignIn && (
-        <div className="fixed inset-0 flex items-center justify-center  bg-black bg-opacity-50"
-          onClick={handleOverlayClick}>
-          <SignIn 
-          signUpForceRedirectUrl="/onboarding" 
-          fallbackRedirectUrl="/onboarding" />
+        <div className="fixed inset-0 flex items-center justify-center  bg-black bg-opacity-50" onClick={handleOverlayClick}>
+          <SignIn signUpForceRedirectUrl="/onboarding" fallbackRedirectUrl="/onboarding" />
         </div>
       )}
     </>

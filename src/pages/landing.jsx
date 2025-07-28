@@ -11,14 +11,14 @@ const LandingPage = () => {
   return (
     <main className="flex flex-col gap-10 sm:gap-20 py-10 sm:py-20 px-4 max-w-screen-xl mx-auto">
       <section className="text-center">
-        <h1 className="flex flex-col items-center justify-center gradient-title text-4xl font-extrabold sm:text-6xl lg:text-8xl tracking-tighter py-4">
+        <h1 className="flex flex-col items-center justify-center text-4xl font-extrabold sm:text-6xl lg:text-8xl tracking-tighter py-4">
           Find Your Dream Job{" "}
           <span className="flex items-center gap-2 mt-1 ml-2">
             and get
             <img src="/logo.png" alt="winniecode Logo" className="h-14 sm:h-24 lg:h-32" />
           </span>
         </h1>
-        <p className="text-gray-300 mt-2 sm:mt-4 text-sm sm:text-lg">Explore thousands of job listings or find the perfect candidate</p>
+        <p className="text-gray-300 mt-2 sm:mt-4 text-sm sm:text-lg">Jelajahi ribuan lowongan kerja dan temukan kandidat terbaik untuk mendukung kesuksesan Anda.</p>
       </section>
 
       <div className="flex flex-wrap gap-4 justify-center">
@@ -49,15 +49,15 @@ const LandingPage = () => {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card>
           <CardHeader>
-            <CardTitle>For Job Seekers</CardTitle>
+            <CardTitle>Untuk Pencari Kerja</CardTitle>
           </CardHeader>
-          <CardContent>Search and apply for jobs, track applications, and more.</CardContent>
+          <CardContent>Telusuri lowongan, kirim lamaran, pantau progresnya, dan nikmati berbagai fitur lainnya.</CardContent>
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle>For Employers</CardTitle>
+            <CardTitle>Untuk Perekrut</CardTitle>
           </CardHeader>
-          <CardContent>Post jobs, manage applications, and find the best candidate.</CardContent>
+          <CardContent>Unggah lowongan pekerjaan, atur proses rekrutmen, dan rekrut talenta terbaik.</CardContent>
         </Card>
       </section>
 
