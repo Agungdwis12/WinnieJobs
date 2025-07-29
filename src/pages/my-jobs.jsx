@@ -12,7 +12,7 @@ const MyJobs = () => {
 
   return (
     <div>
-      <h1 className="font-extrabold text-5xl sm:text-7xl text-center pb-8">{user?.unsafeMetadata?.role === "candidate" ? "My Applications" : "My Jobs"}</h1>
+      <h2 className="font-extrabold text-5xl sm:text-7xl text-center pb-8">{user?.unsafeMetadata?.role === "candidate" ? "My Applications" : "My Jobs"}</h2>
       {user?.unsafeMetadata?.role === "candidate" ? <CreatedApplications /> : <CreatedJobs />}
     </div>
   );

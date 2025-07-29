@@ -74,7 +74,7 @@ const PostJob = () => {
 
   return (
     <div>
-      <h1 className="font-extrabold text-5xl sm:text-7xl text-center pb-8">Post a Job</h1>
+      <h2 className="font-extrabold text-5xl sm:text-7xl text-center pb-8">Post a Job</h2>
 
       <form 
       onSubmit={handleSubmit(onSubmit)}

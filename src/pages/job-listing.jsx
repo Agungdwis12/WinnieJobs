@@ -63,7 +63,7 @@ const JobListing = () => {
 
   return (
     <div>
-      <h1 className="font-extrabold text-6xl sm:text-7xl text-center pb-8">Latest Jobs</h1>
+      <h2 className="font-extrabold text-6xl sm:text-7xl text-center pb-8">Latest Jobs</h2>
 
       {/* Add filter */}
       <form onSubmit={handleSearch} className="h-14 flex flex-row w-full gap-2 items-center mb-3">
