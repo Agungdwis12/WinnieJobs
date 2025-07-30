@@ -6,15 +6,15 @@ Aplikasi job portal modern yang dibangun dengan **Vite + React + Tailwind**, ser
 
 ## 📦 Tech Stack
 
-- ⚡️ Vite + React  
-- 🎨 Tailwind CSS  
-- 🔐 Clerk (Authentication)  
-- ☁️ Supabase (Database & Backend)  
-- 🌍 Country/State/City Picker  
-- 📝 Markdown Editor  
-- 🧩 Form Validation (React Hook Form + Zod)  
-- 🎠 Carousel Plugin  
-- 🌀 React Spinners (Loading)  
+- ⚡️ Vite + React
+- 🎨 Tailwind CSS
+- 🔐 Clerk (Authentication)
+- ☁️ Supabase (Database & Backend)
+- 🌍 Country/State/City Picker
+- 📝 Markdown Editor
+- 🧩 Form Validation (React Hook Form + Zod)
+- 🎠 Carousel Plugin
+- 🌀 React Spinners (Loading)
 
 ---
 
@@ -22,20 +22,26 @@ Aplikasi job portal modern yang dibangun dengan **Vite + React + Tailwind**, ser
 
 ### 1. Inisialisasi Project
 
-npm create vite@latest  
-cd [nama-proyek]  
-npm install  
+```bash
+npm create vite@latest
+cd [nama-proyek]
+npm install
+```
 
 ### 2. Jalankan Aplikasi
 
+```bash
 npm run dev
+```
 
 ---
 
 ## 💅 Setup Tailwind CSS
 
-npm install -D tailwindcss@^3.3.0 postcss autoprefixer  
+```bash
+npm install -D tailwindcss@^3.3.0 postcss autoprefixer
 npx tailwindcss init -p
+```
 
 > Jangan lupa konfigurasi file `tailwind.config.js` dan import ke `index.css` sesuai dokumentasi [Tailwind CSS](https://tailwindcss.com/docs/guides/vite).
 
@@ -43,8 +49,10 @@ npx tailwindcss init -p
 
 ## 🔐 Setup Clerk (Authentication)
 
-npm install @clerk/clerk-react  
+```bash
+npm install @clerk/clerk-react
 npm install @clerk/themes
+```
 
 > Ikuti dokumentasi [Clerk](https://clerk.dev/docs) untuk konfigurasi `ClerkProvider`.
 
@@ -52,14 +60,18 @@ npm install @clerk/themes
 
 ## 🗄️ Setup Supabase
 
+```bash
 npm install @supabase/supabase-js
+```
 
-> Contoh password Supabase dev:  
+> Contoh password Supabase dev:
+```
 jobportal#2003
+```
 
 Tambahkan fungsi SQL berikut di Supabase SQL Editor:
 
-```
+```sql
 create or replace function requesting_user_id()
 return text
 language sql stable
@@ -74,25 +86,51 @@ $$;
 
 ### 📽️ Carousel Autoplay (Shadcn)
 
+```bash
 npm install embla-carousel-autoplay
+```
 
 ### 🌀 Onboarding Spinner
 
+```bash
 npm install react-spinners
+```
 
 ### 🌍 Country, State, City Selector
 
+```bash
 npm install country-state-city
+```
 
 ### 📝 Markdown Editor
 
+```bash
 npm install @uiw/react-md-editor
+```
 
 ### ✅ Form Validation
 
+```bash
 npm install react-hook-form zod @hookform/resolvers
+```
 
 ---
+
+## 📁 Struktur Umum Project
+
+```
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── lib/
+│   └── ...
+├── public/
+├── tailwind.config.js
+├── index.html
+├── package.json
+└── ...
+```
 
 ---
 
