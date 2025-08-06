@@ -63,7 +63,8 @@ const JobListing = () => {
 
   return (
     <div>
-      <h2 className="font-extrabold text-6xl sm:text-7xl text-center pb-8">Latest Jobs</h2>
+      <h2 className="font-extrabold text-4xl sm:text-5xl text-center pb-8">Recent Jobs</h2>
+      <p className="text-gray-400 text-lg sm:text-xl text-center mb-8">Temukan lowongan kerja terbaru yang sesuai dengan minat dan keterampilan Anda.</p>
 
       {/* Add filter */}
       <form onSubmit={handleSearch} className="h-14 flex flex-row w-full gap-2 items-center mb-3">
@@ -90,9 +91,7 @@ const JobListing = () => {
             </SelectGroup>
           </SelectContent>
         </Select>
-        <Select value={company_id} 
-        onValueChange={(value) => setCompany_id(value)}
-        >
+        <Select value={company_id} onValueChange={(value) => setCompany_id(value)}>
           <SelectTrigger>
             <SelectValue placeholder="Filter by Company" />
           </SelectTrigger>
@@ -108,8 +107,8 @@ const JobListing = () => {
             </SelectGroup>
           </SelectContent>
         </Select>
-        
-        <Button onClick={clearFilters} variant='destructive' className='sm:w-1/2'>
+
+        <Button onClick={clearFilters} variant="destructive" className="sm:w-1/2">
           Clear Filters
         </Button>
       </div>

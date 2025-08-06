@@ -32,13 +32,16 @@ const Onboarding = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center mt-32">
-      <h2 className="font-extrabold text-7xl sm:text-8xl tracking-tighter">I am aa...</h2>
-      <div className="mt-16 grid grid-cols-2 gap-4 w-full md:px-40">
-        <Button variant="blue" className="h-36 text-2xl" onClick={() => handleRoleSelection("candidate")}>
+    <div className="flex flex-col items-center justify-center mt-32 px-4">
+      <h2 className="font-extrabold text-4xl sm:text-6xl lg:text-8xl tracking-tighter text-center">I am a...</h2>
+
+      <p className="mt-2 text-gray-400 text-lg sm:text-xl text-center">Silakan pilih peran Anda.</p>
+
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-3xl">
+        <Button variant="blue" className="h-20 sm:h-28 text-xl sm:text-2xl rounded-xl shadow-lg hover:scale-105 transition-transform" onClick={() => handleRoleSelection("candidate")}>
           Candidate
         </Button>
-        <Button variant="pink" className="h-36 text-2xl" onClick={() => handleRoleSelection("recruiter")}>
+        <Button variant="pink" className="h-20 sm:h-28 text-xl sm:text-2xl rounded-xl shadow-lg hover:scale-105 transition-transform" onClick={() => handleRoleSelection("recruiter")}>
           Recruiter
         </Button>
       </div>

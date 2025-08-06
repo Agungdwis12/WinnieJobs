@@ -68,8 +68,19 @@ useEffect(()=>{
       </nav>
 
       {showSignIn && (
-        <div className="fixed inset-0 flex items-center justify-center  bg-black bg-opacity-50" onClick={handleOverlayClick}>
-          <SignIn signUpForceRedirectUrl="/onboarding" fallbackRedirectUrl="/onboarding" />
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50" onClick={handleOverlayClick}>
+          <div className="w-full max-w-md mx-4 bg-gray-900 rounded-2xl p-4">
+            <SignIn
+              signUpForceRedirectUrl="/onboarding"
+              fallbackRedirectUrl="/onboarding"
+              appearance={{
+                elements: {
+                  rootBox: "w-full",
+                  card: "bg-gray-900 shadow-lg rounded-xl w-full",
+                },
+              }}
+            />
+          </div>
         </div>
       )}
     </>

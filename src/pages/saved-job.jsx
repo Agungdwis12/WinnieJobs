@@ -25,14 +25,14 @@ const SaveJobs = () => {
 
   return (
     <div>
-      <h2 className=" font-extrabold text-6xl sm:text-7xl text-center pb-8">Saved Jobs</h2>
+      <h2 className="font-extrabold text-4xl sm:text-5xl text-center pb-8">Saved Jobs</h2>
+      <p className="text-gray-400 text-lg sm:text-xl text-center mb-8">Daftar lowongan yang sudah Anda simpan untuk dilamar.</p>
 
       {loadingSavedJobs === false && (
         <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {savedJobs?.length ? (
             savedJobs.map((saved) => {
-              return <JobCard key={saved.id} job={saved?.job} savedInit={true} onJobSaved={fnSavedJobs}/>
-
+              return <JobCard key={saved.id} job={saved?.job} savedInit={true} onJobSaved={fnSavedJobs} />;
             })
           ) : (
             <div>No Saved Jobs Found 👾</div>

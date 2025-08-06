@@ -12,7 +12,12 @@ const MyJobs = () => {
 
   return (
     <div>
-      <h2 className="font-extrabold text-5xl sm:text-7xl text-center pb-8">{user?.unsafeMetadata?.role === "candidate" ? "My Applications" : "My Jobs"}</h2>
+      <h2 className="font-extrabold text-4xl sm:text-5xl text-center pb-2">{user?.unsafeMetadata?.role === "candidate" ? "My Applications" : "My Jobs"}</h2>
+
+      <p className="text-gray-400 text-lg sm:text-xl text-center mb-8">
+        {user?.unsafeMetadata?.role === "candidate" ? "Lihat dan pantau semua lowongan yang sudah Anda lamar." : "Kelola dan pantau semua lowongan pekerjaan yang telah Anda posting."}
+      </p>
+
       {user?.unsafeMetadata?.role === "candidate" ? <CreatedApplications /> : <CreatedJobs />}
     </div>
   );

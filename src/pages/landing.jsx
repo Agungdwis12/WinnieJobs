@@ -11,13 +11,18 @@ const LandingPage = () => {
   return (
     <main className="flex flex-col gap-10 sm:gap-20 py-10 sm:py-20 px-4 max-w-screen-xl mx-auto">
       <section className="text-center">
-        <h3 className="flex flex-col items-center justify-center text-4xl font-extrabold sm:text-6xl lg:text-8xl tracking-tighter py-4">
-          Find Your Dream Job{" "}
-          <span className="flex items-center gap-2 mt-1 ml-2">
+        <h3 className="font-extrabold tracking-tighter py-4">
+          {/* Baris pertama */}
+          <div className="flex justify-center items-center gap-2 text-2xl sm:text-4xl lg:text-7xl whitespace-nowrap">Find Your Dream Job</div>
+
+          {/* Baris kedua */}
+          <div className="flex justify-center items-center gap-2 text-2xl sm:text-4xl lg:text-7xl whitespace-nowrap">
             and get
-            <img src="/logo.png" alt="winniecode Logo" className="h-14 sm:h-24 lg:h-32" />
-          </span>
+            <img src="/logo.png" alt="winniecode Logo" className="h-10 sm:h-16 lg:h-32" />
+          </div>
         </h3>
+
+        {/* Deskripsi */}
         <p className="text-gray-300 mt-2 sm:mt-4 text-sm sm:text-lg">Jelajahi ribuan lowongan kerja dan temukan kandidat terbaik untuk mendukung kesuksesan Anda.</p>
       </section>
 
@@ -49,23 +54,23 @@ const LandingPage = () => {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card>
           <CardHeader>
-            <CardTitle>Untuk Pencari Kerja</CardTitle>
+            <CardTitle>Employer</CardTitle>
           </CardHeader>
           <CardContent>Telusuri lowongan, kirim lamaran, pantau progresnya, dan nikmati berbagai fitur lainnya.</CardContent>
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle>Untuk Perekrut</CardTitle>
+            <CardTitle>Recruiter</CardTitle>
           </CardHeader>
           <CardContent>Unggah lowongan pekerjaan, atur proses rekrutmen, dan rekrut talenta terbaik.</CardContent>
         </Card>
       </section>
 
-      <Accordion type="single" collapsible>
+      <Accordion type="single" collapsible className="w-full space-y-4">
         {faq.map((faq, index) => (
-          <AccordionItem key={index} value={`item-${index + 1}`}>
-            <AccordionTrigger>{faq.question}</AccordionTrigger>
-            <AccordionContent>{faq.answer}</AccordionContent>
+          <AccordionItem key={index} value={`item-${index + 1}`} className="w-full border-b pb-4">
+            <AccordionTrigger className="text-left w-full break-words whitespace-normal text-base sm:text-lg p-1">{faq.question}</AccordionTrigger>
+            <AccordionContent className="text-left w-full break-words whitespace-normal text-sm sm:text-base p-1 leading-relaxed">{faq.answer}</AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
